@@ -25,8 +25,8 @@
  *  $Log: $
  */
 
-#include "DDPfoCreator.h"
-#include "CalorimeterHitType.h"
+#include "k4GaudiPandora/DDPfoCreator.h"
+#include "k4GaudiPandora/CalorimeterHitType.h"
 
 #include "Api/PandoraApi.h"
 #include "edm4hep/CalorimeterHit.h"

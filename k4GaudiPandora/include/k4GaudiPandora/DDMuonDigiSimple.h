@@ -26,7 +26,7 @@
 #include "edm4hep/EventHeaderCollection.h"
 #include "edm4hep/SimCalorimeterHitCollection.h"
 
-#include "CalorimeterHitType.h"
+#include "k4GaudiPandora/CalorimeterHitType.h"
 #include "DDRec/SurfaceManager.h"
 #include "k4FWCore/Transformer.h"
 #include "k4Interface/IGeoSvc.h"

@@ -34,7 +34,7 @@
 #include "edm4hep/Track.h"
 #include "edm4hep/TrackState.h"
 
-#include "DDMCParticleCreator.h"
+#include "k4GaudiPandora/DDMCParticleCreator.h"
 
 #include <string>
 

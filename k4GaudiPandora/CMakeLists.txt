@@ -1,5 +1,5 @@
 #---------------------------------------------------------------
-FILE( GLOB _plugin_sources src/*.c* )
+FILE( GLOB _plugin_sources src/components/*.c* )
 gaudi_add_module(k4GaudiPandoraPlugins
                 SOURCES         ${_plugin_sources}
 		                ../Utility/MarlinUtil/01-08/source/ClusterShapes.cc

@@ -38,19 +38,20 @@ find_package(k4FWCore)
 find_package(PandoraSDK)
 find_package(LCContent)
 find_package(Gaudi)
+find_package(GSL)
+FIND_PACKAGE(MarlinTrk)
+find_package(LCIO)
+#---------------------------------------------------------------
+add_subdirectory(k4GaudiPandora)
 
 #---------------------------------------------------------------
 
-include(cmake/Key4hepConfig.cmake)
+SET( GAUDI_GENCONF_DIR "genConfDir" )
+if (${Gaudi_VERSION} VERSION_LESS 35.1)
+        SET( GAUDI_GENCONF_DIR "genConf" )
+endif()
 
 include(GNUInstallDirs)
 
-
-add_subdirectory(k4GaudiPandora)
-
-include(CTest)
-if(BUILD_TESTING)
-  add_subdirectory(test)
-endif()
 
 include(cmake/CreateProjectConfig.cmake)

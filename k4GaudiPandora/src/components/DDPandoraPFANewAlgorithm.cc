@@ -29,8 +29,7 @@
 #include "LCContent.h"
 #include "LCPlugins/LCSoftwareCompensation.h"
 
-
-#include "DDPandoraPFANewAlgorithm.h"
+#include "k4GaudiPandora/DDPandoraPFANewAlgorithm.h"
 
 #include "DD4hep/DD4hepUnits.h"
 #include "DD4hep/DetType.h"
@@ -38,10 +37,10 @@
 #include "DD4hep/DetectorSelector.h"
 #include "DDRec/DetectorData.h"
 
-#include "DDTrackCreatorCLIC.h"
+#include "k4GaudiPandora/DDTrackCreatorCLIC.h"
 //#include "DDTrackCreatorILD.h"
 
-#include "DDBFieldPlugin.h"
+#include "k4GaudiPandora/DDBFieldPlugin.h"
 
 #include <cstdlib>
 

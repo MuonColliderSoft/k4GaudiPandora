@@ -25,7 +25,7 @@
  *  $Log: $
  */
 
- #include "DDTrackCreatorCLIC.h"
+ #include "k4GaudiPandora/DDTrackCreatorCLIC.h"
 
  #include <edm4hep/Vertex.h>
  

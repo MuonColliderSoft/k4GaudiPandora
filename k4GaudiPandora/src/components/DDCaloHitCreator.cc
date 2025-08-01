@@ -25,7 +25,7 @@
  *  $Log: $
  */
 
-#include "DDCaloHitCreator.h"
+#include "k4GaudiPandora/DDCaloHitCreator.h"
 
 #include <DD4hep/DD4hepUnits.h>
 #include <DD4hep/DetType.h>

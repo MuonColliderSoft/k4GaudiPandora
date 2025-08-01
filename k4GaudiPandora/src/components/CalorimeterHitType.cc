@@ -16,7 +16,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#include "CalorimeterHitType.h"
+#include "k4GaudiPandora/CalorimeterHitType.h"
 
 #include <algorithm>
 #include <iostream>

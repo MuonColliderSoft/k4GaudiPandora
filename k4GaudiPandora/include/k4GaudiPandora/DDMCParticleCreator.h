@@ -35,8 +35,8 @@
 #include <edm4hep/MCParticleCollection.h>
 #include <edm4hep/CaloHitSimCaloHitLinkCollection.h>
 
-#include "DDCaloHitCreator.h"
-#include "DDTrackCreatorBase.h"
+#include "k4GaudiPandora/DDCaloHitCreator.h"
+#include "k4GaudiPandora/DDTrackCreatorBase.h"
 /**
  *  @brief  DDMCParticleCreator class
  */

@@ -28,11 +28,11 @@
 #ifndef DDPANDORAPFANEWALGORITHM_H
 #define DDPANDORAPFANEWALGORITHM_H 1
 
-#include "DDCaloHitCreator.h"
-#include "DDGeometryCreator.h"
-#include "DDMCParticleCreator.h"
-#include "DDPfoCreator.h"
-#include "DDTrackCreatorBase.h"
+#include "k4GaudiPandora/DDCaloHitCreator.h"
+#include "k4GaudiPandora/DDGeometryCreator.h"
+#include "k4GaudiPandora/DDMCParticleCreator.h"
+#include "k4GaudiPandora/DDPfoCreator.h"
+#include "k4GaudiPandora/DDTrackCreatorBase.h"
 
 // k4FWCore
 #include <k4FWCore/DataHandle.h>

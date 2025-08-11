@@ -16,7 +16,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#include "DDMuonDigiSimple.h"
+#include "k4GaudiPandora/DDMuonDigiSimple.h"
 #include <cctype>
 #include <cstdlib>  // abs
 #include "DD4hep/DD4hepUnits.h"

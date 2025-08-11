@@ -29,7 +29,7 @@
 
 
 #include <LCObjects/LCTrack.h>
-#include "DDTrackCreatorBase.h"
+#include "k4GaudiPandora/DDTrackCreatorBase.h"
 #include "Pandora/PdgTable.h"
 
 #include "IMPL/TrackerHitImpl.h"

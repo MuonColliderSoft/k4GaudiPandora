@@ -25,7 +25,7 @@
  *  $Log: $
  */
 
-#include "DDGeometryCreator.h"
+#include "k4GaudiPandora/DDGeometryCreator.h"
 
 #include "DD4hep/DD4hepUnits.h"
 #include "DD4hep/DetType.h"

@@ -25,7 +25,7 @@
  *  $Log: $
  */
 
-#include "DDBFieldPlugin.h"
+#include "k4GaudiPandora/DDBFieldPlugin.h"
 
 #include "Helpers/XmlHelper.h"
 

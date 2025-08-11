@@ -28,7 +28,7 @@
  #ifndef DDTRACK_CREATOR_CLIC_H
  #define DDTRACK_CREATOR_CLIC_H 1
  
- #include "DDTrackCreatorBase.h"
+ #include "k4GaudiPandora/DDTrackCreatorBase.h"
  
  //------------------------------------------------------------------------------------------------------------------------------------------
  

@@ -9,6 +9,7 @@ gaudi_add_module(k4GaudiPandoraPlugins
                                 EDM4HEP::edm4hep
 				${PandoraSDK_LIBRARIES}
 				${LCContent_LIBRARIES}
+				${PandoraMonitoring_LIBRARIES}
 				${GSL_LIBRARIES}
                                 ${LCIO_LIBRARIES}
                                 ${MarlinTrk_LIBRARIES}
@@ -32,6 +33,7 @@ TARGET_INCLUDE_DIRECTORIES(k4GaudiPandoraPlugins
                         ${Gaudi_INCLUDE_DIRS}
 			${GSL_INCLUDE_DIRS}
 			${PandoraSDK_INCLUDE_DIRS}
+			${PandoraMonitoring_INCLUDE_DIRS}
                         ${LCConent_INCLUDE_DIRS}
                         ${LCIO_INCLUDE_DIRS}
                         ${MarlinTrk_INCLUDE_DIRS}

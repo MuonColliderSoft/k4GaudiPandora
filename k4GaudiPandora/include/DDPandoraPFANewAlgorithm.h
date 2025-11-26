@@ -49,6 +49,16 @@ namespace pandora {
   class Pandora;
 }
 
+struct PandoraSlot {
+  std::unique_ptr<pandora::Pandora>          pandora;
+  std::unique_ptr<DDGeometryCreator>         geometry;
+  std::unique_ptr<DDCaloHitCreator>          calo;
+  std::unique_ptr<DDTrackCreatorBase>        track;
+  std::unique_ptr<DDMCParticleCreator>       mc;
+  std::unique_ptr<DDPfoCreator>              pfo;
+  bool                                       initialised = false;
+};
+
 //------------------------------------------------------------------------------------------------------------------------------------------
 
 /**
@@ -162,35 +172,21 @@ public:
    const std::vector<const edm4hep::CaloHitSimCaloHitLinkCollection*>& caloLinkCollections
  ) const override;
 
-
-
-  /**
+   /**
      *  @brief  End, called at shutdown
      */
   StatusCode finalize();
 
-  /**
-     *  @brief  Get address of the pandora instance
-     *
-     *  @return address of the pandora instance
-     */
-  const pandora::Pandora* GetPandora() const;
-
-  /**
-     *  @brief  Get address of the current lcio event
-     *
-     *  @param  pPandora address of the relevant pandora instance
-     *
-     *  @return address of the current lcio event
-     */
-  //static const EVENT::LCEvent* GetCurrentEvent(const pandora::Pandora* const pPandora);
-
+   /**
+    *  @brief  Get the geometry ID for a given detector name
+    */
+  int getGeoID(const std::string& detName) const;
 private:
   /**
      *  @brief  Register user algorithm factories, energy correction functions and particle id functions,
      *          insert user code here
      */
-  pandora::StatusCode RegisterUserComponents() const;
+  pandora::StatusCode RegisterUserComponents(pandora::Pandora& pandora) const;
 
   /**
      *  @brief  Copy some steering parameters between settings objects
@@ -198,16 +194,17 @@ private:
   void FinaliseSteeringParameters();
 
   /**
+     *  @brief  Get slot data for the current event context
+     */
+  PandoraSlot& slotData(const EventContext& ctx) const;
+
+  /**
      *  @brief  Reset the pandora pfa new processor
      */
-  void Reset() const;
+  void Reset(PandoraSlot &s) const;
 
-  pandora::Pandora*    m_pPandora             = NULL;  ///< Address of the pandora instance
-  DDCaloHitCreator*    m_pCaloHitCreator      = NULL;  ///< The calo hit creator
-  DDGeometryCreator*   m_pGeometryCreator     = NULL;  ///< The geometry creator
-  DDTrackCreatorBase*  m_pTrackCreator        = NULL;  ///< The track creator
-  DDMCParticleCreator* m_pDDMCParticleCreator = NULL;  ///< The mc particle creator
-  DDPfoCreator*        m_pDDPfoCreator        = NULL;  ///< The pfo creator
+  mutable std::vector<PandoraSlot> m_slots;
+  mutable std::mutex               m_slotsMutex;
   SmartIF<IGeoSvc>     m_geoSvc;                       ///< The GeoSvc
 
 
